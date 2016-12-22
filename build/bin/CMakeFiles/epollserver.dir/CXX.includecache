@@ -6,25 +6,39 @@
 
 #IncludeRegexTransform: 
 
-/mnt/hgfs/All files/epoll/src/epoll.cpp
+/mnt/hgfs/All files/epoll/Server/src/buffer.cpp
+buffer.h
+/mnt/hgfs/All files/epoll/Server/src/buffer.h
+
+/mnt/hgfs/All files/epoll/Server/src/buffer.h
+string
+-
+stdlib.h
+-
+
+/mnt/hgfs/All files/epoll/Server/src/clientInfo.h
 iostream
 -
-sys/socket.h
+stdint.h
 -
-sys/epoll.h
+string
 -
-netinet/in.h
+unordered_set
 -
-arpa/inet.h
+winsock.h
 -
-fcntl.h
--
-unistd.h
--
-stdio.h
--
-errno.h
--
-string.h
+
+/mnt/hgfs/All files/epoll/Server/src/public_struct.h
+clientInfo.h
+/mnt/hgfs/All files/epoll/Server/src/clientInfo.h
+buffer.h
+/mnt/hgfs/All files/epoll/Server/src/buffer.h
+
+/mnt/hgfs/All files/epoll/Server/src/test.cpp
+clientInfo.h
+/mnt/hgfs/All files/epoll/Server/src/clientInfo.h
+public_struct.h
+/mnt/hgfs/All files/epoll/Server/src/public_struct.h
+thread
 -
 

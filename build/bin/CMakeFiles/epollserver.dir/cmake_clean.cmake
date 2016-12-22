@@ -1,5 +1,7 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/epollserver.dir/epoll.o"
+  "CMakeFiles/epollserver.dir/buffer.cpp.o"
+  "CMakeFiles/epollserver.dir/clientInfo.cpp.o"
+  "CMakeFiles/epollserver.dir/test.cpp.o"
   "epollserver.pdb"
   "epollserver"
 )

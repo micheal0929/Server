@@ -1,1 +1,1 @@
-/usr/bin/c++       CMakeFiles/epollserver.dir/epoll.o  -o epollserver -rdynamic 
+/usr/bin/c++       CMakeFiles/epollserver.dir/buffer.cpp.o CMakeFiles/epollserver.dir/clientInfo.cpp.o CMakeFiles/epollserver.dir/test.cpp.o  -o epollserver  -L/mnt/hgfs/All  -Lfiles/epoll/Server/include -rdynamic 

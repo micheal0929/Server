@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/hgfs/All files/epoll"
+CMAKE_SOURCE_DIR = "/mnt/hgfs/All files/epoll/Server"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/hgfs/All files/epoll/build"
+CMAKE_BINARY_DIR = "/mnt/hgfs/All files/epoll/Server/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd "/mnt/hgfs/All files/epoll/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/mnt/hgfs/All files/epoll/build/CMakeFiles" "/mnt/hgfs/All files/epoll/build/bin/CMakeFiles/progress.marks"
-	cd "/mnt/hgfs/All files/epoll/build" && $(MAKE) -f CMakeFiles/Makefile2 bin/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/hgfs/All files/epoll/build/CMakeFiles" 0
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/mnt/hgfs/All files/epoll/Server/build/CMakeFiles" "/mnt/hgfs/All files/epoll/Server/build/bin/CMakeFiles/progress.marks"
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(MAKE) -f CMakeFiles/Makefile2 bin/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/hgfs/All files/epoll/Server/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/mnt/hgfs/All files/epoll/build" && $(MAKE) -f CMakeFiles/Makefile2 bin/clean
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(MAKE) -f CMakeFiles/Makefile2 bin/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,22 +85,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/mnt/hgfs/All files/epoll/build" && $(MAKE) -f CMakeFiles/Makefile2 bin/preinstall
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(MAKE) -f CMakeFiles/Makefile2 bin/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/mnt/hgfs/All files/epoll/build" && $(MAKE) -f CMakeFiles/Makefile2 bin/preinstall
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(MAKE) -f CMakeFiles/Makefile2 bin/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/mnt/hgfs/All files/epoll/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 bin/CMakeFiles/epollserver.dir/rule:
-	cd "/mnt/hgfs/All files/epoll/build" && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/epollserver.dir/rule
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/epollserver.dir/rule
 .PHONY : bin/CMakeFiles/epollserver.dir/rule
 
 # Convenience name for target.
@@ -109,23 +109,80 @@ epollserver: bin/CMakeFiles/epollserver.dir/rule
 
 # fast build rule for target.
 epollserver/fast:
-	cd "/mnt/hgfs/All files/epoll/build" && $(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/build
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/build
 .PHONY : epollserver/fast
 
+buffer.o: buffer.cpp.o
+.PHONY : buffer.o
+
 # target to build an object file
-epoll.o:
-	cd "/mnt/hgfs/All files/epoll/build" && $(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/epoll.o
-.PHONY : epoll.o
+buffer.cpp.o:
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/buffer.cpp.o
+.PHONY : buffer.cpp.o
+
+buffer.i: buffer.cpp.i
+.PHONY : buffer.i
 
 # target to preprocess a source file
-epoll.i:
-	cd "/mnt/hgfs/All files/epoll/build" && $(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/epoll.i
-.PHONY : epoll.i
+buffer.cpp.i:
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/buffer.cpp.i
+.PHONY : buffer.cpp.i
+
+buffer.s: buffer.cpp.s
+.PHONY : buffer.s
 
 # target to generate assembly for a file
-epoll.s:
-	cd "/mnt/hgfs/All files/epoll/build" && $(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/epoll.s
-.PHONY : epoll.s
+buffer.cpp.s:
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/buffer.cpp.s
+.PHONY : buffer.cpp.s
+
+clientInfo.o: clientInfo.cpp.o
+.PHONY : clientInfo.o
+
+# target to build an object file
+clientInfo.cpp.o:
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/clientInfo.cpp.o
+.PHONY : clientInfo.cpp.o
+
+clientInfo.i: clientInfo.cpp.i
+.PHONY : clientInfo.i
+
+# target to preprocess a source file
+clientInfo.cpp.i:
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/clientInfo.cpp.i
+.PHONY : clientInfo.cpp.i
+
+clientInfo.s: clientInfo.cpp.s
+.PHONY : clientInfo.s
+
+# target to generate assembly for a file
+clientInfo.cpp.s:
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/clientInfo.cpp.s
+.PHONY : clientInfo.cpp.s
+
+test.o: test.cpp.o
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/test.cpp.s
+.PHONY : test.cpp.s
 
 # Help Target
 help:
@@ -136,9 +193,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... epollserver"
 	@echo "... rebuild_cache"
-	@echo "... epoll.o"
-	@echo "... epoll.i"
-	@echo "... epoll.s"
+	@echo "... buffer.o"
+	@echo "... buffer.i"
+	@echo "... buffer.s"
+	@echo "... clientInfo.o"
+	@echo "... clientInfo.i"
+	@echo "... clientInfo.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 
@@ -150,6 +213,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/mnt/hgfs/All files/epoll/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

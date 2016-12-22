@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/hgfs/All files/epoll"
+CMAKE_SOURCE_DIR = "/mnt/hgfs/All files/epoll/Server"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/hgfs/All files/epoll/build"
+CMAKE_BINARY_DIR = "/mnt/hgfs/All files/epoll/Server/build"
 
 # Include any dependencies generated for this target.
 include bin/CMakeFiles/epollserver.dir/depend.make
@@ -49,54 +49,106 @@ include bin/CMakeFiles/epollserver.dir/progress.make
 # Include the compile flags for this target's objects.
 include bin/CMakeFiles/epollserver.dir/flags.make
 
-bin/CMakeFiles/epollserver.dir/epoll.o: bin/CMakeFiles/epollserver.dir/flags.make
-bin/CMakeFiles/epollserver.dir/epoll.o: ../src/epoll.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/mnt/hgfs/All files/epoll/build/CMakeFiles" $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object bin/CMakeFiles/epollserver.dir/epoll.o"
-	cd "/mnt/hgfs/All files/epoll/build/bin" && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/epollserver.dir/epoll.o -c "/mnt/hgfs/All files/epoll/src/epoll.cpp"
+bin/CMakeFiles/epollserver.dir/buffer.cpp.o: bin/CMakeFiles/epollserver.dir/flags.make
+bin/CMakeFiles/epollserver.dir/buffer.cpp.o: ../src/buffer.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/mnt/hgfs/All files/epoll/Server/build/CMakeFiles" $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object bin/CMakeFiles/epollserver.dir/buffer.cpp.o"
+	cd "/mnt/hgfs/All files/epoll/Server/build/bin" && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/epollserver.dir/buffer.cpp.o -c "/mnt/hgfs/All files/epoll/Server/src/buffer.cpp"
 
-bin/CMakeFiles/epollserver.dir/epoll.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/epollserver.dir/epoll.i"
-	cd "/mnt/hgfs/All files/epoll/build/bin" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/mnt/hgfs/All files/epoll/src/epoll.cpp" > CMakeFiles/epollserver.dir/epoll.i
+bin/CMakeFiles/epollserver.dir/buffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/epollserver.dir/buffer.cpp.i"
+	cd "/mnt/hgfs/All files/epoll/Server/build/bin" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/mnt/hgfs/All files/epoll/Server/src/buffer.cpp" > CMakeFiles/epollserver.dir/buffer.cpp.i
 
-bin/CMakeFiles/epollserver.dir/epoll.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/epollserver.dir/epoll.s"
-	cd "/mnt/hgfs/All files/epoll/build/bin" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/mnt/hgfs/All files/epoll/src/epoll.cpp" -o CMakeFiles/epollserver.dir/epoll.s
+bin/CMakeFiles/epollserver.dir/buffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/epollserver.dir/buffer.cpp.s"
+	cd "/mnt/hgfs/All files/epoll/Server/build/bin" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/mnt/hgfs/All files/epoll/Server/src/buffer.cpp" -o CMakeFiles/epollserver.dir/buffer.cpp.s
 
-bin/CMakeFiles/epollserver.dir/epoll.o.requires:
-.PHONY : bin/CMakeFiles/epollserver.dir/epoll.o.requires
+bin/CMakeFiles/epollserver.dir/buffer.cpp.o.requires:
+.PHONY : bin/CMakeFiles/epollserver.dir/buffer.cpp.o.requires
 
-bin/CMakeFiles/epollserver.dir/epoll.o.provides: bin/CMakeFiles/epollserver.dir/epoll.o.requires
-	$(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/epoll.o.provides.build
-.PHONY : bin/CMakeFiles/epollserver.dir/epoll.o.provides
+bin/CMakeFiles/epollserver.dir/buffer.cpp.o.provides: bin/CMakeFiles/epollserver.dir/buffer.cpp.o.requires
+	$(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/buffer.cpp.o.provides.build
+.PHONY : bin/CMakeFiles/epollserver.dir/buffer.cpp.o.provides
 
-bin/CMakeFiles/epollserver.dir/epoll.o.provides.build: bin/CMakeFiles/epollserver.dir/epoll.o
+bin/CMakeFiles/epollserver.dir/buffer.cpp.o.provides.build: bin/CMakeFiles/epollserver.dir/buffer.cpp.o
+
+bin/CMakeFiles/epollserver.dir/clientInfo.cpp.o: bin/CMakeFiles/epollserver.dir/flags.make
+bin/CMakeFiles/epollserver.dir/clientInfo.cpp.o: ../src/clientInfo.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/mnt/hgfs/All files/epoll/Server/build/CMakeFiles" $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object bin/CMakeFiles/epollserver.dir/clientInfo.cpp.o"
+	cd "/mnt/hgfs/All files/epoll/Server/build/bin" && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/epollserver.dir/clientInfo.cpp.o -c "/mnt/hgfs/All files/epoll/Server/src/clientInfo.cpp"
+
+bin/CMakeFiles/epollserver.dir/clientInfo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/epollserver.dir/clientInfo.cpp.i"
+	cd "/mnt/hgfs/All files/epoll/Server/build/bin" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/mnt/hgfs/All files/epoll/Server/src/clientInfo.cpp" > CMakeFiles/epollserver.dir/clientInfo.cpp.i
+
+bin/CMakeFiles/epollserver.dir/clientInfo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/epollserver.dir/clientInfo.cpp.s"
+	cd "/mnt/hgfs/All files/epoll/Server/build/bin" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/mnt/hgfs/All files/epoll/Server/src/clientInfo.cpp" -o CMakeFiles/epollserver.dir/clientInfo.cpp.s
+
+bin/CMakeFiles/epollserver.dir/clientInfo.cpp.o.requires:
+.PHONY : bin/CMakeFiles/epollserver.dir/clientInfo.cpp.o.requires
+
+bin/CMakeFiles/epollserver.dir/clientInfo.cpp.o.provides: bin/CMakeFiles/epollserver.dir/clientInfo.cpp.o.requires
+	$(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/clientInfo.cpp.o.provides.build
+.PHONY : bin/CMakeFiles/epollserver.dir/clientInfo.cpp.o.provides
+
+bin/CMakeFiles/epollserver.dir/clientInfo.cpp.o.provides.build: bin/CMakeFiles/epollserver.dir/clientInfo.cpp.o
+
+bin/CMakeFiles/epollserver.dir/test.cpp.o: bin/CMakeFiles/epollserver.dir/flags.make
+bin/CMakeFiles/epollserver.dir/test.cpp.o: ../src/test.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/mnt/hgfs/All files/epoll/Server/build/CMakeFiles" $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object bin/CMakeFiles/epollserver.dir/test.cpp.o"
+	cd "/mnt/hgfs/All files/epoll/Server/build/bin" && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/epollserver.dir/test.cpp.o -c "/mnt/hgfs/All files/epoll/Server/src/test.cpp"
+
+bin/CMakeFiles/epollserver.dir/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/epollserver.dir/test.cpp.i"
+	cd "/mnt/hgfs/All files/epoll/Server/build/bin" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/mnt/hgfs/All files/epoll/Server/src/test.cpp" > CMakeFiles/epollserver.dir/test.cpp.i
+
+bin/CMakeFiles/epollserver.dir/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/epollserver.dir/test.cpp.s"
+	cd "/mnt/hgfs/All files/epoll/Server/build/bin" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/mnt/hgfs/All files/epoll/Server/src/test.cpp" -o CMakeFiles/epollserver.dir/test.cpp.s
+
+bin/CMakeFiles/epollserver.dir/test.cpp.o.requires:
+.PHONY : bin/CMakeFiles/epollserver.dir/test.cpp.o.requires
+
+bin/CMakeFiles/epollserver.dir/test.cpp.o.provides: bin/CMakeFiles/epollserver.dir/test.cpp.o.requires
+	$(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/test.cpp.o.provides.build
+.PHONY : bin/CMakeFiles/epollserver.dir/test.cpp.o.provides
+
+bin/CMakeFiles/epollserver.dir/test.cpp.o.provides.build: bin/CMakeFiles/epollserver.dir/test.cpp.o
 
 # Object files for target epollserver
 epollserver_OBJECTS = \
-"CMakeFiles/epollserver.dir/epoll.o"
+"CMakeFiles/epollserver.dir/buffer.cpp.o" \
+"CMakeFiles/epollserver.dir/clientInfo.cpp.o" \
+"CMakeFiles/epollserver.dir/test.cpp.o"
 
 # External object files for target epollserver
 epollserver_EXTERNAL_OBJECTS =
 
-bin/epollserver: bin/CMakeFiles/epollserver.dir/epoll.o
+bin/epollserver: bin/CMakeFiles/epollserver.dir/buffer.cpp.o
+bin/epollserver: bin/CMakeFiles/epollserver.dir/clientInfo.cpp.o
+bin/epollserver: bin/CMakeFiles/epollserver.dir/test.cpp.o
 bin/epollserver: bin/CMakeFiles/epollserver.dir/build.make
 bin/epollserver: bin/CMakeFiles/epollserver.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable epollserver"
-	cd "/mnt/hgfs/All files/epoll/build/bin" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/epollserver.dir/link.txt --verbose=$(VERBOSE)
+	cd "/mnt/hgfs/All files/epoll/Server/build/bin" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/epollserver.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 bin/CMakeFiles/epollserver.dir/build: bin/epollserver
 .PHONY : bin/CMakeFiles/epollserver.dir/build
 
-bin/CMakeFiles/epollserver.dir/requires: bin/CMakeFiles/epollserver.dir/epoll.o.requires
+bin/CMakeFiles/epollserver.dir/requires: bin/CMakeFiles/epollserver.dir/buffer.cpp.o.requires
+bin/CMakeFiles/epollserver.dir/requires: bin/CMakeFiles/epollserver.dir/clientInfo.cpp.o.requires
+bin/CMakeFiles/epollserver.dir/requires: bin/CMakeFiles/epollserver.dir/test.cpp.o.requires
 .PHONY : bin/CMakeFiles/epollserver.dir/requires
 
 bin/CMakeFiles/epollserver.dir/clean:
-	cd "/mnt/hgfs/All files/epoll/build/bin" && $(CMAKE_COMMAND) -P CMakeFiles/epollserver.dir/cmake_clean.cmake
+	cd "/mnt/hgfs/All files/epoll/Server/build/bin" && $(CMAKE_COMMAND) -P CMakeFiles/epollserver.dir/cmake_clean.cmake
 .PHONY : bin/CMakeFiles/epollserver.dir/clean
 
 bin/CMakeFiles/epollserver.dir/depend:
-	cd "/mnt/hgfs/All files/epoll/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/hgfs/All files/epoll" "/mnt/hgfs/All files/epoll/src" "/mnt/hgfs/All files/epoll/build" "/mnt/hgfs/All files/epoll/build/bin" "/mnt/hgfs/All files/epoll/build/bin/CMakeFiles/epollserver.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/mnt/hgfs/All files/epoll/Server/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/hgfs/All files/epoll/Server" "/mnt/hgfs/All files/epoll/Server/src" "/mnt/hgfs/All files/epoll/Server/build" "/mnt/hgfs/All files/epoll/Server/build/bin" "/mnt/hgfs/All files/epoll/Server/build/bin/CMakeFiles/epollserver.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : bin/CMakeFiles/epollserver.dir/depend
 

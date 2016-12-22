@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/hgfs/All files/epoll/src
+# Install script for directory: /mnt/hgfs/All files/epoll/Server/src
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

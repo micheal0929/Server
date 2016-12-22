@@ -9,42 +9,48 @@ Client::~Client()
 {
 
 }
-bool Client::operator==(const Client& c) const
-{
-	if (!c.GetUserName().compare(this->GetUserName()))
-	{
-		return true;
-	}
-	return false;
-}
+//bool Client::operator==(const Client& c) const
+//{
+//	if (!c.GetUserName().compare(this->GetUserName()))
+//	{
+//		return true;
+//	}
+//	return false;
+//}
 inline void Client::ChangeStatus(bool state)
 {
 	m_user_status = state;
 }
 
-inline bool Client::UpRank(Client::RankType rank)
+inline bool Client::UpRank(RankType rank)
 {
-	;
+	
 }
-inline void Client::SetUserInfo(UserNameType& name, UserPasswordType& password)
+/*inline*/ void Client::SetUserInfo(UserNameType& name, UserPasswordType& password)
 {
 	m_user_name = name;
 	m_user_password = password;
 	
 }
-inline void Client::SetUserIP(SOCKADDR_IN& clientaddr)
+inline void Client::SetUserRank(RankType rank)
 {
-	m_user_ip = inet_ntoa(clientaddr.sin_addr);
-	m_user_port = clientaddr.sin_port;
+		
 }
-inline void Client::SetUserSock(SockType sock)
+/*inline*/ void Client::SetUserAddr(SOCKADDR_IN clientaddr)
+{
+	m_addr = clientaddr;
+	m_user_ip = inet_ntoa(clientaddr.sin_addr);
+	m_user_port = PORT;
+	
+}
+/*inline*/ void Client::SetUserSock(SockType sock)
 {
 	m_sockid = sock;
 }
 void Client::ShowInfo(void) const
 {
-	std::cout << m_user_name << "\t" << m_user_password << std::endl;
-	std::cout << m_user_ip << "\t" << m_user_port << std::endl;
+	std::cout << "\t"<< m_user_name << "\t" << m_user_password << std::endl;
+	std::cout << "\t"<< m_user_ip << "\t" << m_user_port << std::endl;
 }
 inline Client::UserNameType Client::GetUserName(void) const
 {
@@ -70,7 +76,7 @@ inline Client::RankType Client::GetUserRank(void) const
 {
 	return m_user_rank;
 }
-inline Client::SockType Client::GetUserSock(void) const
+/*inline*/ Client::SockType Client::GetUserSock(void) const
 {
 	return m_sockid;
 }
@@ -87,37 +93,38 @@ ClientManager::~ClientManager()
 {
 
 }
-bool ClientManager::AccountCheck(Client::UserNameType* name, \
-								 Client::UserPasswordType* password)
+bool ClientManager::AccountCheck(Client& nc)
 {
-	if (name == NULL || password == NULL)//若为空则返回
+	if (nc.GetUserName().empty() || nc.GetUserPassword().empty())//若为空则返回
 		return false;
 	else
 	{
-		for (client_set_iterator it = myclients.begin(); it != myclients.end(); ++it)
+		for (client_set_iterator it = m_myclients.begin(); it != m_myclients.end(); ++it)
 		{
-			if (!name->compare(it->GetUserName()))//用户名已存在
+			if (!nc.GetUserName().compare(it->GetUserName()))//用户名已存在
 			{
 				return false;
 			}
 		}//用户名不存在
-		Client tmp_client = Client();
-		tmp_client.SetUserInfo(*name, *password);
-		tmp_client.SetUserIP(client_addr);
-		tmp_client.SetUserSock(client_sock);
-		addNewClient(tmp_client);
+		
+		addNewClient(nc);
+		return true;
 	}
 	
 }
 void ClientManager::DisplayAllUsers(void)
 {
-	std::cout << "UserName:\tUserPsd" << std::endl;
-	for (client_set_iterator it = myclients.begin(); it != myclients.end(); ++it)
+	std::cout << "\tUserName:\tUserPsd" << std::endl;
+	for (client_set_iterator it = m_myclients.begin(); it != m_myclients.end(); ++it)
 	{
 		it->ShowInfo();
 	}
 }
 inline void ClientManager::addNewClient(Client& nc)
 {
-	myclients.insert(nc);
+	m_myclients.insert(nc);
+}
+ClientManager::client_set ClientManager::GetClientSet(void)
+{
+	return m_myclients;
 }

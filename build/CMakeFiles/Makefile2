@@ -47,10 +47,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/hgfs/All files/epoll"
+CMAKE_SOURCE_DIR = "/mnt/hgfs/All files/epoll/Server"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/hgfs/All files/epoll/build"
+CMAKE_BINARY_DIR = "/mnt/hgfs/All files/epoll/Server/build"
 
 #=============================================================================
 # Directory level rules for directory bin
@@ -74,7 +74,7 @@ bin/preinstall:
 bin/CMakeFiles/epollserver.dir/all:
 	$(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/depend
 	$(MAKE) -f bin/CMakeFiles/epollserver.dir/build.make bin/CMakeFiles/epollserver.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report "/mnt/hgfs/All files/epoll/build/CMakeFiles"  1
+	$(CMAKE_COMMAND) -E cmake_progress_report "/mnt/hgfs/All files/epoll/Server/build/CMakeFiles"  1 2 3
 	@echo "Built target epollserver"
 .PHONY : bin/CMakeFiles/epollserver.dir/all
 
@@ -84,9 +84,9 @@ all: bin/CMakeFiles/epollserver.dir/all
 
 # Build rule for subdir invocation for target.
 bin/CMakeFiles/epollserver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/hgfs/All files/epoll/build/CMakeFiles" 1
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/hgfs/All files/epoll/Server/build/CMakeFiles" 3
 	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/epollserver.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/hgfs/All files/epoll/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/hgfs/All files/epoll/Server/build/CMakeFiles" 0
 .PHONY : bin/CMakeFiles/epollserver.dir/rule
 
 # Convenience name for target.
